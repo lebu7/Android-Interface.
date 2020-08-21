@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+     <link rel="stylesheet" href="css/android.css">
+     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+        <title>Resposnive Android interface</title>
+    </head>
+    <body>
+        
+        <div id="device">
+            <div id="screen">
+                <input type="search" placeholder="Google" id="search" />
+                <table>
+                    <tr>
+                        <td colspan="4"><span id="clock">12:00 AM</span></td>
+                    </tr>
+                    <tr>
+                        <td><img src=" https://cdn1.iconfinder.com/data/icons/appicns/513/appicns_Chrome.png " alt="Browser" class="icon" id='google' /></td>
+                        <td><img src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Contacts-icon.png" class="icon" id="ppl" /></td>
+                        <td><img src="http://icons.iconarchive.com/icons/dtafalonso/android-l/512/Calculator-icon.png" class="icon" id="calc" /></td>
+                        <td><img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/calendar-icon.png" class="icon" id="openCal" /></td>
+                    </tr>
+                    <tr>
+                        <td><img src=" http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Settings-icon.png " id="openSet" class="icon" /></td>
+                        <td><img src="https://cdn1.iconfinder.com/data/icons/android-png/256/Android-Email.png" id="openEmail" class="icon" /></td>
+                        <td><img src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/News-And-Weather-icon.png" id="openNews" class="icon" />
+                        </td>
+                        <td><img src="http://porcelanatoliquido.info/wp-content/uploads/2016/04/icone-pintura.png" class="icon" id="openPaint" /></td>
+                    </tr>
+                    <tr>
+                        <td><img src="http://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Phone-icon.png" class="icon" id="openDialer" /></td>
+                        <td><img src="http://piq.codeus.net/static/media/userpics/piq_40021_400x400.png" class="icon" id="openGame" /></td>
+                        <td><img src="https://a.disquscdn.com/dotcom/d-2407bda/img/brand/disqus-social-icon-blue-transparent.png" class="icon" id="openDed" /></td>
+                        <td><img src="https://lh4.ggpht.com/2jbUS9Hz8nWQEZKQR17xpxEnXhlW3tisxmhi-NNrMaA6TQT2RtewoHAezDXCbEPJxg=w300" class="icon" id="term" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="controls">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/png/512/android-system-home.png" alt="home" id="home" draggable="false" />
+            </div>
+        </div>
+        <window id="contacts">
+        <h3>Contacts</h3>
+        <style>
+#profileList{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    font-weight: bolder;
+}
+.profileImg{
+   display: inline-block;
+   width: 24pt;
+   height: 24pt; 
+   margin-right: 5px;
+   margin-left: 5px;
+}
+</style>
+<p id="profileList"><img src="https://api.sololearn.com/Uploads/Avatars/8681997.jpg" class="profileImg" /><a href="https://www.sololearn.com/Profile/8681997/?ref=app">Lebu Ayiga</a></p>
+<p id="profileList"><img src='https://api.sololearn.com/Uploads/Avatars/8681997.jpg' class="profileImg"/><a href='https://www.sololearn.com/Profile/8681997/?ref=app'>Lebu Ayiga</a></p>
+
+<p id="profileList"><img src='https://api.sololearn.com/Uploads/Avatars/8681997.jpg' class="profileImg"/><a href='https://www.sololearn.com/Profile/8681997/?ref=app'>Lebu Ayiga</a></p>
+
+
+        </window>
+        <window id="calculator">
+            <style>
+                #scn {
+                   width: calc(100% - 10px);
+                   height: 20px;
+                   padding: 5px;
+                   text-align: right; 
+                   color: black;
+                   background-color: #777;
+                   display: block;
+                }
+                .btnC {
+                    display: inline-block;
+                    width: 25%;
+                    height: 15%;
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                    outline: none;
+                    background-color: #555;
+                    color: #AAA;
+                    font-size: 15pt;
+                    overflow: hidden;
+                    box-shadow: 0 0 1px 0px #000;
+                }
+                .btnC:active {
+                    background-color: #777; 
+                }
+                .dblBtnC {
+                    width: 50%;
+                }
+            </style>
+            <span id="scn"></span>
+            <button class="btnC">(</button><button class="btnC">)</button><button class="btnC">π</button><button class="btnC">CE</button>
+            <br />
+            <button class="btnC">1</button><button class="btnC">2</button><button class="btnC">3</button><button class="btnC">+</button>
+            <br />
+            <button class="btnC">4</button><button class="btnC">5</button><button class="btnC">6</button><button class="btnC">-</button>
+            <br />
+            <button class="btnC">7</button><button class="btnC">8</button><button class="btnC">9</button><button class="btnC">/</button>
+            <br />
+            <button class="btnC">.</button><button class="btnC">0</button><button class="btnC">^</button><button class="btnC">*</button>
+            <br />
+            <button class="btnC">%</button><button class="btnC">ANS</button><button id="eqC" class="btnC dblBtnC">=</button>
+        </window>
+        <window id="apps">
+            <p>No Recent Apps</p>
+        </window>
+        <window id="settings">
+            <style>
+                #clrPaint {
+                    background: #777;
+                    color: #FFF;
+                    border: none;
+                }
+                #clrPaint:active {
+                    background: #333;
+                }
+                #sett {
+                   width: 100%;
+                   position: static;
+                   margin: 0; 
+                   padding: 0;
+                   background-color: #111;
+                   color: #AAA;
+                   border-collapse: collapse;
+                   border: none;
+                   height: initial;
+                }
+                
+                tr {
+                   padding: 0;
+                   margin: 0;
+                }
+                #setHead {
+                   background-color: #555;
+                   color: #CCC; 
+                }
+                #bright {
+                    transform: rotate(180deg);
+                }
+            </style>
+            <table id="sett" border="0">
+                <tr id="setHead">
+                    <th class="th"><img src="" />Settings</th>
+                </tr>
+                <tr>
+                    <td class="td">Background:</td>
+                    <td class="td"><select width="50px" id="bgcolor"></select></td>
+                </tr>
+                <tr>
+                    <td class="td">Brightness</td>
+                    <td class="td"><input type="range" min="20" max="100" value="20" id="bright" /></td>
+                </tr>
+                <tr>
+                    <td class="td">Clear Paint</td>
+                    <td class="td"><button id="clrPaint">CLEAR</button></td>
+                </tr>
+                <tr>
+                    <td class="td">Developer:</td>
+                    <td class="td">Lebu Ayiga +254719307452</td>
+                </tr>
+            </table>
+        </window>
+        <window id="email">
+            <div id="emailHeader">
+                <img src="https://cdn1.iconfinder.com/data/icons/android-png/256/Android-Email.png" class="icon" id="eico" />
+                <h3 id="etitle">Email</h3>
+            </div>
+            <div id="mail">
+                <textarea type="email" id="addr" placeholder="Email"></textarea>
+                <textarea type="text" id="subj" placeholder="Subject"></textarea>
+                <textarea id="ebody" placeholder="Body"></textarea><br />
+                <button id="sendEmail">Send</button>
+            </div>
+            <style>
+                #mail {
+                    text-align: center;
+                    width: 100%;
+                }
+                #ebody {
+                    min-width: 80%;
+                    max-width: 80%;
+                    min-height: 100px;
+                    border: solid 1px #AAA;
+                    border-radius: 5px;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+                #subj, #addr {
+                    min-width: 80%;
+                    max-width: 80%;
+                    border: solid 1px #AAA;
+                    border-radius: 5px;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+                #addr {
+                    margin-top: 10px;
+                }
+                #emailHeader {
+                    width: 100%;
+                    background: #CCC;
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                }
+                #etitle {
+                    padding-left: 15px;
+                    font-weight: lighter;
+                }
+                #sendEmail {
+                    border: none;
+                    outline: none;
+                    width: 60%;
+                    padding: 5px;
+                    background: #CCC;
+                }
+                #sendEmail:active {
+                    background: #AAA;
+                }
+            </style>
+        </window>
+        <window id="news">
+            <style>
+                #updates {
+                    background: #EEE;
+                }
+                #changeHeader {
+                    background: #0061ff;
+                    color: #FFF;
+                    font-size: 15pt;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+                    padding: 5px;
+                    padding-left: 15px;
+                    height: 30px;
+                    width: calc(100% - 20px);
+                    text-align: left;
+                }
+                #changeContent {
+                    margin-top: 50px;
+                    text-align: left;
+                    width: calc(90% - 10px);
+                    padding: 5px;
+                    background: #FFF;
+                    word-wrap: break-word;
+                    border-radius: 5px;
+                    box-shadow: 1px 1px 2px #555;
+                    margin-left: 5%;
+                }
+            </style>
+            <div id="updates">
+                <div id='changeHeader'>News</div>
+                <div id='changeContent'>
+                    <p>Recently Added</p>
+                    <ul>
+                        <li>Fixed brightness scale</li>
+                        <li>New News App icon</li>
+                        <li>Built-in Browser</li>
+                        <li>Improved Mail App design</li>
+                        <li>Improved Recent Apps screen</li>
+                        <li>Terminal Emulator!!</li>
+                        <li>Calculator buttons enlarged</li>
+                        <li>New background selector in settings</li>
+                        <li>Updated Changelog UI</li>
+                        <li>Replaced Notepad app with Dialer app</li>
+                        <li>Updated Contacts app icon</li>
+                    </ul>
+                    <p>Soon to Come</p>
+                    <ul>
+                        <li>Updates to Paint App</li>
+                        <li>Updates to Settings app</li>
+                    </ul>
+                    <p>Check out my new <a href='https://code.sololearn.com/WEUpc82Ak7lC/#js'>Working iPhone</a> code aswell!</p>
+                </div>
+                <br />
+            </div>
+        </window>
+        <window id="dialer">
+            <style>
+                #number {
+                    height: 16.6666666667%;
+                    width: 100%;
+                    text-align: left;
+                    background: #EEE;
+                    color: #333;
+                    font-size: 20pt;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+                    overflow: auto;
+                }
+                .dialerBtn {
+                    height: 16.6666666667%;
+                    width: 33.3333333333%;
+                    background: #DDD;
+                    color: #AAA;
+                    font-size: 15pt;
+                    border: none;
+                    outline: none;
+                    box-shadow: 0 0 1px 0 #333;
+                }
+                .dialerBtn:active {
+                    background: #BCBCBC;
+                }
+                #dialerCall {
+                    height: 16.6666666667%;
+                    width: 100%;
+                    background: #3dbf39;
+                    color: #FFF;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 15pt;
+                    border: none;
+                    outline: none;
+                }
+                #dialerCall:active {
+                    background: #42ad3a;
+                }
+            </style>
+            <div id='number'></div>
+            <button class='dialerBtn'>1</button><button class='dialerBtn'>2</button><button class='dialerBtn'>3</button>
+            <br />
+            <button class='dialerBtn'>4</button><button class='dialerBtn'>5</button><button class='dialerBtn'>6</button>
+            <br />
+            <button class='dialerBtn'>7</button><button class='dialerBtn'>8</button><button class='dialerBtn'>9</button>
+            <br />
+            <button class='dialerBtn'>#</button><button class='dialerBtn'>0</button><button class='dialerBtn'>*</button>
+            <br />
+            <button id='dialerCall'>CALL</button>
+        </window>
+        <window id="paint">
+            <canvas id="c" height="100px" width="100px"></canvas>
+            <div id="paintCtrl">
+                <input type="color" id="colorSel" />
+            </div>
+            
+            <style>
+                #c {
+                    margin: 0;
+                    padding: 0;
+                    border: solid 1px #000;
+                }
+                #paintCtrl {
+                    width: 100%;
+                    height: 25px;
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+            </style>
+        </window>
+        <style>
+            #paint {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+        </style>
+        <window id="calendar">
+            <table id="cal" border="0">
+                <tr>
+                    <td colspan="7" class="day" id="datetitle"></td>
+                </tr>
+                <tr>
+                    <th class="day thd">Sun</th>
+                    <th class="day thd">Mon</th>
+                    <th class="day thd">Tue</th>
+                    <th class="day thd">Wed</th>
+                    <th class="day thd">Thu</th>
+                    <th class="day thd">Fri</th>
+                    <th class="day thd">Sat</th>
+                </tr>
+                <tr id="first">
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                </tr>
+                <tr>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                </tr>
+                <tr>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                </tr>
+                <tr>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                </tr>
+                <tr>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                </tr>
+                <tr>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                    <td class="day"></td>
+                </tr>
+            </table>
+        </window>
+        <window id='browser'>
+            <style>
+                #browse {
+                    margin: 0;
+                    height: 100%;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    overflow: auto;
+                }
+            </style>
+            <iframe src='http://www.bing.com' id='browse'></iframe>
+        </window>
+        <window id="game">
+            <div id="gameBg">
+                <button id="beginGame">START</button>
+            </div>
+            <style>
+                #gameBg {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: #05F;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.target {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    background: transparent;
+    transition: left 1.5s ease-in-out;
+    position: absolute;
+    left:;
+    bottom: 0;
+}
+#beginGame {
+    padding: 15px;
+    border: none;
+    color: #F50;
+    background: #FA0;
+    font-family: monospace;
+    font-weight: bold;
+    width: 100px;
+    border-radius: 3px;
+}
+.note {
+    color: #FA0;
+    font-size: 17pt;
+    font-weight: bolder;
+    text-shadow: 0 0 2px #F70;
+    text-align: center;
+    width: calc(100% - 50px);
+    padding: 25px;
+}
+            </style>
+        </window>
+        <window id="ded">
+            <div id="dedHead">Dedication</div>
+            <div id="dedication">
+                <div id="dedPic">
+                    <img src="https://api.sololearn.com/Uploads/Avatars/1997575.jpg" id="dedImg" />
+                </div>
+                <h2 id="dedUser">Lebu Ayiga</h2>
+                <button id="gotoDed">Visit Profile</button>
+                <button id="newDed">New Dedication</button>
+            </div>
+        </window>
+        <window id='terminal'>
+            <style>
+                #shell {
+                    margin: 0;
+                    height: 100%;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                }
+            </style>
+            <iframe src='http://web.editey.com/1XXnNAZV8UlrJnp_P2uqI6Xf6ughuzPD_/index.html' id='shell' data-author="This was made by me but on a different website"></iframe>
+        </window>
+        <window id="blackScn"></window>
+        <div id="power"></div>
+        <div id="brightness"></div>
+        <script src="js/android.js"></script>
+    </body>
+</html>

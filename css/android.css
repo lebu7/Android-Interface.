@@ -1,0 +1,252 @@
+* {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    font-family: 'Roboto';
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+canvas {
+    cursor: crosshair;
+}
+#device {
+    display: block;
+    background-color: #000;
+    width: 90vw;
+    height: 100vh;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-left: 5vw;
+    margin-bottom: 0;
+}
+#screen {
+    width: 80vw;
+    height: 85vh;
+    background: linear-gradient( 135deg, #F761A1 10%, #8C1BAB 100%);
+    position: absolute;
+    left: 10vw;
+    top: 5vh;
+    z-index: 1;
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+#controls {
+    width: 90vw;
+    height: 10vh;
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 5vw;
+    margin: 0;
+    padding: 0;
+}
+#home {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    height: 50px;
+    width: 50px;
+}
+#home:active {
+    filter: invert(50%);
+    -webkit-filter: invert(50%);
+}
+#search {
+   width: calc(90% - 10px) ;
+   outline: none;
+   border: none;
+   border-radius: 10px;
+   opacity: 0.5;
+   position: absolute;
+   top: 5vw;
+   left: 5vw;
+   margin: 0;
+   padding: 5px;
+}
+table {
+   width: 70vw; 
+   height: 60vh;
+   position: absolute;
+   left: 5vw;
+   top: 20vh;
+   background-color: transparent;
+}
+.icon {
+   width: 15vw;
+   height: 15vw; 
+}
+a, a:active, a:focus, a:hover {
+   -webkit-tap-highlight-color: transparent; 
+   -webkit-tap-highlight: none;
+   highlight: none;
+   text-decoration: none;
+   color: #000;
+}
+td {
+   padding: 0; 
+   margin: 0;
+   width: 15vw;
+   height: 15vw;
+   text-align: center;
+}
+#calculator {
+   white-space: nowrap; 
+   margin: 0;
+   padding: 0;
+   background-color: #000;
+}
+#apps {
+   color: #00AAFF; 
+   background-color: rgba(0,0,0,.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: 'Roboto', arial;
+   font-weight: bold;
+   font-size: 15pt;
+   text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+#settings {
+   background-color: #111; 
+}
+.td {
+   display: inline-flex;
+   justify-content: left;
+   align-items: center;
+   height: auto;
+   width: calc(50% - 20px);
+   padding: 10px;
+   margin: 0;
+   overflow: hidden;
+}
+.th {
+   display: inline-flex;
+   justify-content: left;
+   align-items: center;
+   height: auto;
+   width: calc(100% - 10px);
+   padding: 5px;
+   margin: 0;
+   overflow: hidden;
+}
+#blackScn {
+   background-color: #000; 
+}
+#power {
+   height: 50px; 
+   width: 2vw;
+   position: absolute;
+   left: 94.5vw;
+   top: 20vh;
+   z-index: 0;
+   background-color: #000;
+}
+#bgcolor {
+    outline: none;
+    border: none;
+    background: linear-gradient( 135deg, #F761A1 10%, #8C1BAB 100%);
+}
+#clock {
+    color: #FFF;
+    font-family: 'Open Sans Condensed';
+    padding: 0;
+    margin: 0;
+    font-size: 10vw;
+    letter-spacing: 1px;
+}
+#brightness {
+    width:80vw;
+    height:85vh;
+    background-color:#000;
+    position:absolute;
+    left:10vw;
+    top:5vh;
+    z-index: 1000;
+    overflow:auto;
+    pointer-events: none;
+    opacity: 0;
+}
+#cal {
+    position: static;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-collapse: collapse;
+}
+.day {
+    height: auto;
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+.thd {
+    background: #DDD;
+}
+#datetitle {
+    background: #F33;
+}
+#openGame {
+    background-color: #FFF;
+    border-radius: 5px;
+}
+#dedication {
+    width: calc(100% - 30px);
+    min-height: calc(100% - 70px);
+    background: #EEE;
+    padding: 15px;
+    text-align: center;
+    align: center;
+    margin: 0;
+}
+#dedHead {
+    width: calc(100% - 30px);
+    height: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: #77F;
+    padding: 15px;
+    color: #FFF;
+    font-weight: bolder;
+    font-size: 15pt;
+}
+#dedPic {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#dedImg {
+    width: 100px;
+    height: 50%;
+    height: 100px;
+    border-radius: 50px;
+    box-shadow: 0 0 15px 5px #CCC;
+}
+#dedDesc {
+    text-align: center justify;
+    border-top: solid 2px #000;
+    border-bottom: solid 2px #000;
+}
+#newDed, #gotoDed {
+    width: 75%;
+    border: none;
+    outline: none;
+    background: #77F;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 15pt;
+    border-radius: 5px;
+    padding: 2px;
+}
+#newDed:active, #gotoDed:active {
+    background: #33B;
+}
